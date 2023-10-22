@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote</title>
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    background-image: url('images/back-ground4.jpg'); 
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: end;
+    margin: 20px 25px;
+    align-items: center;
+    gap:20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    transition: all 0.6s;
+}
+
+.nav a:hover {
+    box-shadow: 4px 4px 8px black;
+    color: #fff;
+    background-color: rgb(80, 79, 79);
+}
+
+.nav button {
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 4px #190482;
+    background-color: transparent;
+    transition: all 0.6s;
+    font-size: 18px;
+}
+
+.nav button:hover {
+    box-shadow: 4px 4px 8px black;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(80, 79, 79);
+}
+
+.container {
+    border: 1px solid black;
+    margin: 1% 20%;
+    padding: 20px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container h1{
+    font-size: 18px;
+    text-align: center;
+}
+
+.container .party-options {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: 500;
+}
+
+.container .opt span {
+    font-weight: 500;
+    padding: 10px 0px;
+    background-color: transparent;
+    border-radius: 10px;
+    color:black;
+    font-size: 18px;;
+}
+
+.container button{
+    padding: 10px 60px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 4px black;
+    width: 100%;
+    margin: 30px 0px;
+    background-color: green;
+    overflow: hidden;
+    transition: all 0.6s;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.container button:hover {
+    background-color: limegreen;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px #fff;
+    transform: scale(.9);
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background-color: limegreen;
+}
+
+</style>
+
+<body>
+    
+    <div id="voting-header"></div>
+
+    <div class="container">
+        <div class="opt">
+            <h1>Political Parties</h1>
+            <div class="political-parties">
+                <input type="checkbox" id="ANC">
+                <span class="checkmark">African National Congress(ANC)</span>
+            </div>
+
+            <div class="political-parties">
+                <input type="checkbox"  id="DA">
+                <span class="checkmark">Democratic Alliance(DA)</span>
+            </div>
+
+            <div class="political-parties">
+                <input type="checkbox"  id="EFF">
+                <span class="checkmark">Economic Freedom Fighters(EFF)</span>
+            </div>
+            
+            <div class="political-parties">
+                <input type="checkbox"  id="IFP">
+                <span class="checkmark">Inkatha Freedom Party(IFP)</span>
+            </div>
+            
+            <div class="political-parties">
+                <input type="checkbox"  id="VF+">
+                <span class="checkmark">Freedom Front Plus(VF+)</span>
+            </div>
+            
+            <div class="political-parties">
+                <input type="checkbox"  id="ACDP">
+                <span class="checkmark">African Christian Democratic Party(ACDP)</span>
+            </div>
+            
+            <div class="political-parties">
+                <input type="checkbox"  id="UDM">
+                <span class="checkmark">United Democratic Movement(UDM)</span>
+            </div>
+            
+            <div class="political-parties">
+                <input type="checkbox"  id="ATM">
+                <span class="checkmark">African Transformation Movement(ATM)</span>
+            </div>
+            
+            
+            <div class="political-parties">
+                <input type="checkbox"  id="GOOD">
+                <span class="checkmark">Good(GOOD)</span>
+            </div>
+            
+            <div class="political-parties">
+                <input type="checkbox"  id="NFP">
+                <span class="checkmark">National Freedom Party(NFP)</span>
+            </div>
+            
+            <div class="political-parties">
+                <input type="checkbox"  id="AIC">
+                <span class="checkmark">African Independent Congress(AIC)</span>
+            </div>
+            
+            <div class="political-parties">
+                <input type="checkbox"  id="PAC">
+                <span class="checkmark">Pan Africanist Congress of Azania(PAC)</span>
+            </div>
+            
+            <div class="political-parties">
+                <input type="checkbox"  id="ALJAMA">
+                <span class="checkmark">Al Jama-ah(ALJAMA)</span>
+            </div>
+            
+            <button type="button">VOTE</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- <form id="voting-form">
+        <label for="party">Political Parties</label></font></center>
+        <h1>Political Parties</h1>
+        <select name="party" id="party" class="party-options">
+            <option value="ANC">African National Congress(ANC)</option>
+            <option value="DA">Democratic Alliance(DA)</option>
+            <option value="EFF">Economic Freedom Fighters(EFF)</option>
+            <option value="IFP">Inkatha Freedom Party(IFP)</option>
+			<option value="VF+">Freedom Front Plus(VF+)</option>
+			<option value="ACDP">African Christian Democratic Party(ACDP)</option>
+			<option value="UDM">United Democratic Movement(UDM)</option>
+			<option value="ATM">African Transformation Movement(ATM)</option>
+			<option value="Good">	Good(GOOD)</option>
+			<option value="NFP">National Freedom Party(NFP)</option>
+			<option value="AIC">African Independent Congress(AIC)</option>
+			<option value="COPE">Congress of the People(COPE)</option>
+			<option value="PAC">Pan Africanist Congress of Azania(PAC)</option>
+			<option value="ALJAMA">Al Jama-ah(ALJAMA)	</option>
+        </select>
+        
+        <input type="submit" value="Submit Vote">
+    </form> -->
+
+    <div id="footer"></div>
+    <script>
+
+    function logout() {
+        window.location.href = 'index.html';
+        }
+
+
+    fetch('voting_header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('voting-header').innerHTML = data);
+    fetch('voting-footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

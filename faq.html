@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        background-image: url('images/back-ground3.jpg');
+        width: 100%;
+        height: 300px;
+        backdrop-filter: blur(10px);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .the-questions {
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin: 0px 50px;
+    padding: 20px 0px;
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('images/back-color.jpg');
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+    .the-questions ul {
+        list-style:circle;
+        padding: 0;
+}
+
+    .the-questions ul:hover {
+        cursor: pointer;
+}
+
+    .the-questions ul li {
+        font-size: 16px;
+        margin: 10px 50px;
+        text-align: left;
+        color: #fff;
+        font-weight: 100;
+}
+
+    .the-questions h1 {
+        margin-bottom: 50px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+</style>
+
+<body>
+    <div id="header"></div>
+
+    <!----------    WEB CONTENT ------------>
+    <div class="the-questions">
+        <h1>Frequently Asked Questions (FAQ)</h1>
+        <ul>
+            <li>How do I register to vote?</li>
+            <li>What is the process for verifying my identity?</li>
+            <li>Can I vote electronically if I don't have internet access or a computer?</li>
+            <li>Is the voting system used in all elections, or are they limited to certain types of elections?</li>
+            <li>What measures are in place to protect the privacy of my vote?</li>
+            <li>Can I change my vote after I've submitted it?</li>
+            <li>How are electronic voting maintained and updated to ensure they remain secure and reliable?</li>
+            <li>What is the backup plan if the system experiences a complete failure on Election Day?</li>
+            <li>Is there a way to verify that my vote was counted in the results of the elections?</li>
+            <li>What is the role of election officials in overseeing and administering electronic voting systems independently verified, and who conducts their verifications?</li>
+            <li>Can I vote using a mobile app on my smartphone?</li>
+            <li>What happens to the data collected through the system after the election is over?</li>
+            <li>Can I still vote in person using traditional paper ballots if I prefer not to use the system?</li>
+            <li>How is the training of poll workers and election staff handled in the context of the system?</li>
+        </ul>
+    </div>
+
+
+
+    <div id="footer"></div>
+    <script>
+        // Loading header and footer using JavaScript
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

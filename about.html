@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    
+    body {
+        background-image: url('images/back-ground3.jpg');
+        width: 100%;
+        height: 300px;
+        backdrop-filter: blur(10px);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .two-columns {
+        display: flex;
+    }
+
+    .column {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 4px 4px 8px #7752FE;
+        border-radius: 20px;
+        margin: 20px 20px;
+        background-image: url('images/back-color.jpg');
+        backdrop-filter: blur(10px);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .column img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .column p {
+        margin-top: 10px;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        margin: 40px 40px;
+    }
+
+    .about-label h1 {
+        color: #fff;
+        text-align: center;
+        margin: 50px 50px;
+        font-family: 'Tilt Neon', sans-serif;
+        font-size: 80px;
+    }
+
+</style>
+
+<body>
+    <div id="header"></div>
+
+    <!--------- WEB CONTENT----------->
+    <div class="about-label">
+        <h1>About Us</h1>
+    </div>
+    <section class="two-columns">
+        
+        <div class="column">
+            <p>The introduction of an online voting system represents a significant leap forward in addressing the persistent issue of exclusion in the voting process. By shifting the voting process to a digital platform, we are breaking down traditional barriers that have long prevented individuals from participating in elections. Now, people who face physical limitations, those who live in remote areas, and those with busy schedules can all have equal access to the voting process. This technology ensures that every eligible voter, regardless of their circumstances, can exercise their democratic right. It fosters inclusivity, making sure that no one is left behind and that the voices of all citizens can be heard, ultimately strengthening the foundations of our democracy.</p>
+            <img src="images/x1.jpg" alt="Image 1">
+            
+        </div>
+        <div class="column">
+            <p>The advent of an online voting system brings with it a host of advantages, foremost among them being the unparalleled convenience it offers to voters. Traditional voting methods often entail long queues and time-consuming visits to physical polling stations, which can be particularly challenging for individuals with busy schedules, mobility issues, or those residing in remote areas. Online voting eliminates these barriers, enabling citizens to cast their ballots from the comfort of their homes, workplaces, or any location with internet access. This convenience not only makes the democratic process more accessible but also encourages greater participation, ensuring that every voice is heard and every vote counts. With online voting, the power to shape the future is placed squarely in the hands of the people, transforming the way we engage in our democratic responsibilities.</p>
+            <img src="images/x2.jpg" alt="Image 2">
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <script>
+        // Loading header and footer using JavaScript
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

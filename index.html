@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitizenExpress</title>
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+</head>
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    background-image: url('images/back-ground3.jpg');
+    width: 100%;
+    height: 300px;
+    backdrop-filter: blur(10px); 
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* Hero Section Styles */
+.hero {
+    background-image: url('images/hero-s.jpg');
+    background-size:cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: Black;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px 20px;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+
+* .hero h1 {
+    color: #ffcc00;
+} 
+
+.hero p {
+    font-weight: bold;
+} 
+
+.countdown-section {
+    display: block;
+}
+
+.countdown-section h2{
+    text-align: center;
+    margin: 60px 0px;
+    font-size: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Arvo', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes gradientChange {
+    0% {
+        background: linear-gradient(to right, #ffffff, #979797); 
+    }
+    20% {
+        background: linear-gradient(to right, #6b6b6b, #333333);
+    }
+    50% {
+        background: linear-gradient(to right, #6b6b6b, #979797); 
+    }
+    80% {
+        background: linear-gradient(to right, #242424, #000000);
+    }
+    100% {
+        background: linear-gradient(to right, #ffffff, #000000);
+    }
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-shadow: 2px 10px 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+}
+
+#countdown div {
+    text-align: center;
+    margin: 0 85px;
+}
+
+#countdown div::before {
+    content: "";
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+.cal {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+    
+}
+
+.cal p{
+    margin: 0px 30px;
+    font-size: 35px;
+    color: #190482;
+    font-weight: 700;
+    animation: gradientChange 2s linear infinite;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.two-column-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.column {
+    padding: 20px;
+
+    background-image: url('images/back-color.jpg');
+    border-radius: 20px;
+    margin: 20px 20px;
+    box-shadow: 2px 2px 4px #7752FE;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.column h2{
+    color: #fff;
+    text-align:center;
+}
+
+.column p{
+    text-align: left;
+}
+
+.column li {
+    text-align: left;
+}
+.column .left img{
+    width: 50%;
+    margin-top: 30px;
+}
+
+.column .right img{
+    border-radius: 20px;
+    margin: 20px 0px;
+}
+
+.column:nth-child(odd) {
+    background-color: #190482;
+    border-radius: 20px;
+    margin: 20px 20px;
+    box-shadow: 2px 2px 4px #7752FE;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+
+
+</style>
+
+<body>
+    <div id="header"></div>
+
+    <!----- WEB CONTENT ------>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to CitizenExpress</h1>
+            <p>Be Included!</p>
+        </div>
+    </div>
+
+    <!-----------COUNT DOWN----------->
+    <div class="countdown-section">
+        <h2>Count Down To Election Day</h2>
+    </div>
+
+    <div class="cal">
+        <p>Days</p>
+        <p>Hours</p>
+        <p>Minutes</p>
+        <p>Seconds</p>
+    </div>
+    
+    <div id="countdown">
+        <div id="days">0</div>
+        <div id="hours">0</div>
+        <div id="minutes">0</div>
+        <div id="seconds">0</div>
+    </div>
+
+
+    <!------Columns------>
+
+    <div class="two-column-container">
+        <div class="column">
+            <h2>CitizenExpress</h2>
+            <p>Express your voting right with your easy accessed system created for you to cast your vote withh just an simple instruction step of registering to use the app then provided the service with user friendly interested technologies to cast a vote!</p>
+            <div class="left">
+                <img src="images/IEC_SA_logo.svg.png">
+            </div>
+        </div>
+        <div class="column">
+            <h2>Requirements</h2>
+            <li>Be a South African Citizen</li>
+            <li>Be at least 16 years old (you can only vote from age 18)</li>
+            <li>Have a green, bar-coded ID book; smartcard ID or valid Temporary Identity Certificate (TIC)</li>
+            <div class="right">
+                <img src="images/image1.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        // Load header and footer using JavaScript
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+
+        function updateCountdown() {
+            const countdownDate = new Date('2023-11-30T00:00:00').getTime();
+            const currentDate = new Date().getTime();
+            const timeDifference = countdownDate - currentDate;
+
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+            }
+
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+
+    </script>
+</body>
+</html>

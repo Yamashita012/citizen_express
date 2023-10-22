@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+</head>
+<style>
+    body {
+        background-image: url('images/back-ground3.jpg');
+        width: 100%;
+        height: 300px;
+        backdrop-filter: blur(10px);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .container {
+            background-image: url("images/signin-background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 90px 30%;
+        }
+
+        .container ion-icon {
+            margin: 40px 0px;
+            font-size: 100px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px 20px;
+            border-radius: 100%;
+        }
+
+        .container form {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin: 0px 15%;
+        }
+
+        .container input[type="text"],
+        .container input[type="email"],
+        .container input[type="number"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: transparent;
+            font-family: 'Roboto', sans-serif;
+            transition: border-color 0.3s, transform 0.3s;
+            box-shadow: 2px 2px 6px #190482;
+        }
+
+        .container .party-options {
+            width: 50%;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #190482;
+            font-family: 'Roboto', sans-serif;
+            transition: border-color 0.3s, transform 0.3s;
+            box-shadow: 2px 2px 6px #190482;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .container input[type="text"]:hover,
+        .container input[type="email"]:hover,
+        .container input[type="number"]:hover,
+        .container input[type="password"]:hover{
+            cursor: pointer;
+            border-color: #007bff;
+            transform: scale(1.05);
+        }
+
+        .container button {
+            margin: 30px 0px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            font-family: 'Tilt Neon', sans-serif;
+            transition: transform 0.4s;
+        }
+
+        .container button:hover {
+            background-color: #0056b3;
+            color:black;
+            font-family: 'Tilt Neon', sans-serif;
+            transform: scale(.9);
+            font-weight: 600;
+        }
+
+        .container p {
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+        }
+
+        .container a {
+            color:black;
+            margin-left: 5px;
+            transition: color 0.4s;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .container a:hover{
+            color: #0056b3;
+        }
+
+</style>
+<body>
+    <div id="header"></div>
+
+    <!--------- WEB CONTENT ------->
+    <div class="container">
+        <ion-icon name="person-add"></ion-icon>
+        <form>
+            <p>First Name</p>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            <p>Second Name</p>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            <p>Race</p>
+            <select name="party" id="race" class="party-options">
+                <option value="race">Black/Afican</option>
+                <option value="race">Colored</option>
+                <option value="race">White</option>
+                <option value="race">Indian</option>
+                <option value="race">Other</option>
+            </select>
+            <p>Email</p>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <p>ID Number</p>
+            <input type="number" id="idNumber" name="idNumber" placeholder="ID Number" required>
+            <p>Phone Number</p>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+            <p>Address</p>
+            <input type="text" id="address" name="address" placeholder="Address" required>
+            <p>Password</p>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <p>Confirm Password</p>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            <button type="button" onclick="signUp()">Sign Up</button>
+        </form>
+        <p>Already signed up?<a href="signin.html">SignIn</a></p>
+    </div>
+
+
+    <div id="footer"></div>
+
+
+
+
+    <script src="dummyDatabase.js">
+        import dummyDatabase from './dummyDatabase.js';
+    </script>
+
+    <script>
+
+
+        // Loading the header and footer using JavaScript
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

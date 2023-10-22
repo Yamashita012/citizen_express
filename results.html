@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Results</title>
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+</head>
+<style>
+    .graph-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .graph-container .bx{
+        box-shadow: 2px 2px 4px black;
+        border: none;
+        height: 100%;
+        margin: 20px 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        padding: 25px 25px;
+        color: black;
+    }
+
+    .graph-container #bx2 h1{
+        margin-bottom: 250px;
+    }
+
+    .graph-container h1{
+        text-align: center;
+    }
+
+
+</style>
+<body>
+
+    <div id="voting-header"></div>
+
+
+    <div class="graph-container">
+
+        <div class="bx">
+            <h1>Votes By Parties</h1>
+            <canvas id="myBarChart"></canvas>
+        </div>
+
+        <div  class="bx" id="bx2">
+            <h1>Votes By Age Group</h1>
+            <canvas id="myAgeBarChart"></canvas>
+        </div>
+    </div>
+
+
+<!---------------VOTERS AGE GROUPED -->
+
+<script src="age_dummydatabase.js">
+    import ageDatabase from './age_dummydatabase.js';
+</script>
+
+<script src="candidates_database.js">
+    import dummyDatabase from './candidates_database.js';
+</script>
+<script>
+
+    // Extract party names and vote counts
+    const partyNames = dummyDatabase.map(data => data.party);
+    const voteCounts = dummyDatabase.map(data => data.votes);
+
+    // Create a bar chart
+    const ctx = document.getElementById("myBarChart").getContext("2d");
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: partyNames,
+            datasets: [
+                {
+                    label: "Votes",
+                    data: voteCounts,
+                    backgroundColor: "rgba(54, 162, 235)",
+                    borderColor: "rgba(0, 0, 0,)",
+                    borderWidth: 2,
+                    borderRadius: 20,
+                    color: 'Black',
+
+                },
+            ],
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                },
+            },
+        },
+    });
+
+    const voterAge = ageDatabase.map(data => data.Age);
+    const totalVotes = ageDatabase.map(data => data.total_votes);
+
+    // Create a bar chart
+    const ctx2 = document.getElementById("myAgeBarChart").getContext("2d");
+    new Chart(ctx2, {
+        type: "bar",
+        data: {
+            labels: voterAge,
+            datasets: [
+                {
+                    label: "Votes",
+                    data: totalVotes,
+                    backgroundColor: "#FFD700",
+                    borderColor: "rgba(0, 0, 0,)",
+                    borderWidth: 2,
+                    borderRadius: 20,
+                    color: 'black',
+                },
+            ],
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                },
+            },
+        },
+    });
+</script>
+    
+
+    <div id="footer"></div>
+    <script>
+    fetch('voting-footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+
+    fetch('voting_header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('voting-header').innerHTML = data);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    background-image: url('images/back-ground4.jpg');
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: end;
+    margin: 20px 25px;
+    align-items: center;
+    gap:20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    transition: all 0.6s;
+}
+
+.nav a:hover {
+    box-shadow: 4px 4px 8px black;
+    color: #fff;
+    background-color: rgb(80, 79, 79);
+}
+
+.nav button {
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 4px #190482;
+    background-color: transparent;
+    transition: all 0.6s;
+    font-size: 18px;
+}
+
+.nav button:hover {
+    box-shadow: 4px 4px 8px black;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(80, 79, 79);
+}
+
+</style>
+
+<div class="nav">
+    <a href="voting.html">Vote</a>
+    <a href="candidates.html">Candidates</a>
+    <a href="results.html">Results</a>
+    <button type="button" onclick="logout()">Logout</button>
+</div>
+
